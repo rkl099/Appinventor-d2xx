@@ -4,6 +4,9 @@ This work was done to resolve the “Java Lang.NoClassDefFoundError: Failed reso
 when using an FTDI adapter with appinventor. It only adds d2xx in an extension to the same code used for
 the built in serial component. See: https://community.appinventor.mit.edu/t/using-serial-with-ftdi/14136
 
+The extension can not be used with AI companion. (A conflict between libraries used by AI companion)
+You have to compile your app and transfer it to your device for testing.
+
 (The later SerialOTG extension resolves many problems with the built in serial component and adds new functions.
  It also adds more adapters but no FTDI specific functions )
 
