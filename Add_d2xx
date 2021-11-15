@@ -1,0 +1,28 @@
+To include d2xx to appinventor
+
+This work was done to resolve the “Java Lang.NoClassDefFoundError: Failed resolution of Lcom/ftdi/j2xx/D2xxManager”
+when using an FTDI adapter with appinventor. It only adds d2xx in an extension to the same code used for
+the built in serial component. See: https://community.appinventor.mit.edu/t/using-serial-with-ftdi/14136
+
+(The later SerialOTG extension resolves many problems with the built in serial component and adds new functions.
+ It also adds more adapters but no FTDI specific functions )
+
+How to:
+
+copy d2xx.jar to appinventor/lib/physicaloid
+
+in appinventor/components/build.xml
+
+after the following line:
+    <copy toFile="${public.deps.dir}/physicaloid.jar" file="${lib.dir}/physicaloid/physicaloid-library.jar" />
+add this line    
+    <copy toFile="${public.deps.dir}/d2xx.jar" file="${lib.dir}/physicaloid/d2xx.jar" />
+
+
+se NewSerial.java how to make an extension with physicaloid.jar and d2xx.jar
+Add this file to .../runtime 
+
+
+d2xx.jar can be found here: (but maybe not the one I have tested)
+https://ftdichip.com/drivers/d2xx-drivers/
+
